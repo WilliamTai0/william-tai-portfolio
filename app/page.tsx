@@ -94,8 +94,9 @@ export default function Home() {
                   {p.desc}
                 </p>
                 {p.title === "AI-Powered Health App" && (
-                  <ProjectVideo videoSrc="/fyp-video.mp4#t=36" />
+                  <ProjectVideo youtubeId="BA7dbMfby58" />
                 )}
+
 
               </div>
             </div>

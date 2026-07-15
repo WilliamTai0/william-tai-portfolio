@@ -3,11 +3,10 @@
 import React, { useState } from "react";
 
 interface ProjectVideoProps {
-  videoSrc: string; // e.g. "/fyp-video.mp4"
-  posterSrc?: string; // thumbnail placeholder image
+  youtubeId: string;
 }
 
-export default function ProjectVideo({ videoSrc, posterSrc }: ProjectVideoProps) {
+export default function ProjectVideo({ youtubeId }: ProjectVideoProps) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
@@ -30,11 +29,12 @@ export default function ProjectVideo({ videoSrc, posterSrc }: ProjectVideoProps)
           </span>
         </div>
       ) : (
-        <video
-          src={videoSrc}
-          controls
-          autoPlay
-          className="w-full h-full object-cover"
+        <iframe
+          src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&start=36`}
+          title="FYP Project Demo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full border-0"
         />
       )}
     </div>
