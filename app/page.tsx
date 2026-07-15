@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import ProjectVideo from "@/components/ProjectVideo";
 
 const projects = [
   {
@@ -92,11 +93,16 @@ export default function Home() {
                 <p className="text-text-secondary text-sm font-light leading-relaxed max-w-[65ch]">
                   {p.desc}
                 </p>
+                {p.title === "AI-Powered Health App" && (
+                  <ProjectVideo videoSrc="/fyp-video.mp4#t=36" />
+                )}
+
               </div>
             </div>
           ))}
         </div>
       </section>
+
 
       {/* Skills Section */}
       <section className="mb-16">
