@@ -15,8 +15,8 @@ const albert = Albert_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "William Tai | Full-Stack & AI Developer",
-  description: "Portfolio of William Tai - Computer Engineering, HKUST",
+  title: "William Tai | Backend Systems & AI Integration",
+  description: "Portfolio of William Tai - Computer Engineering Graduate, HKUST",
 };
 
 export default function RootLayout({

@@ -3,41 +3,101 @@ import ProjectVideo from "@/components/ProjectVideo";
 
 const projects = [
   {
-    title: "AI-Powered Health App",
-    desc: "FastAPI backend serving 20+ REST endpoints, LLM integration via Hugging Face (Qwen-2.5-VL), containerized ML pipeline (YOLOv8, PaddleOCR).",
-    tags: ["FastAPI", "MongoDB", "Docker", "LLM API"],
+    title: "AI-Powered Multi-Modal Health Platform",
+    desc: "HKUST Final Year Project (Grade A) backend serving 30+ RESTful endpoints. Integrated multi-modal LLM pipeline with Qwen-2.5-VL-72B via Hugging Face Router, MongoDB GridFS binary media storage, and containerized deployment in Docker Compose.",
+    tags: ["FastAPI", "MongoDB GridFS", "Docker", "Qwen-2.5-VL"],
     link: "https://github.com/CYNLeo/FYP_AI_Health_APP",
   },
   {
     title: "Smart Trip Planner",
-    desc: "AI travel app in Flutter with Gemini 2.5 Flash Lite function-calling, Amadeus + Google Places API integration, MongoDB Atlas backend.",
-    tags: ["Flutter", "Gemini API", "MongoDB", "MVVM"],
+    desc: "Agentic travel application built with Flutter and Gemini 2.5 Flash Lite tool-calling. Intercepts queries to trigger Amadeus & Google Places APIs, resolving IATA codes and synthesizing multi-day itineraries persisted in MongoDB Atlas.",
+    tags: ["Flutter", "Gemini Tool Calling", "MongoDB Atlas", "MVVM"],
     link: "https://github.com/WilliamTai0/SmartTrip-Planner",
   },
   {
-    title: "AI Developer Assistant Integration",
-    desc: "Deployed Model Context Protocol (MCP) servers sandboxed in Docker to extend LLM tool execution and runtime context.",
-    tags: ["MCP", "Docker", "AI Agents"],
+    title: "AI Developer Toolchain & MCP Integration",
+    desc: "Deployed containerized Model Context Protocol (MCP) servers in Docker to securely bridge local AI coding assistants with GitHub APIs and filesystem operations via structured JSON schema tool interfaces.",
+    tags: ["Model Context Protocol", "Docker", "Python", "Tool Interception"],
     link: null,
+  },
+  {
+    title: "TimeLock Anti-Addiction Android App",
+    desc: "Native Android application built with Kotlin, Jetpack Compose, and Room. Features a persistent StateFlow heartbeat engine to eliminate background coroutine freezes, single-use token emergency pass, and Xiaomi background suppression bypass.",
+    tags: ["Kotlin", "Jetpack Compose", "Room / SQLite", "Material 3"],
+    link: null,
+  },
+  {
+    title: "React Testing & CI Pipeline Showcase",
+    desc: "Production-grade integration test suite using Vitest and React Testing Library with Mock Service Worker (MSW) to simulate 401, 404, and 500 network states. Configured automated test runs and coverage reporting via GitHub Actions CI.",
+    tags: ["Vitest", "React Testing Library", "MSW", "GitHub Actions"],
+    link: "https://github.com/WilliamTai0/react-vitest-ci-showcase",
   },
 ];
 
 const skillCategories = [
   {
-    name: "Languages",
-    items: ["Python", "JavaScript", "TypeScript"],
+    name: "AI & Agent Systems",
+    items: [
+      "Model Context Protocol (MCP)",
+      "LLM Tool Calling & Interception",
+      "Structured Output & JSON Schema",
+      "Hugging Face Router",
+      "Prompt Engineering",
+    ],
   },
   {
-    name: "Frameworks & Libraries",
-    items: ["FastAPI", "Next.js", "Flutter"],
+    name: "Backend & Systems",
+    items: [
+      "Python (FastAPI)",
+      "RESTful API Design",
+      "Docker & Docker Compose",
+      "Linux (Ubuntu)",
+      "Microservice Integration",
+      "Azure (SQL, Key Vault)",
+    ],
   },
   {
-    name: "Databases & DevOps",
-    items: ["MongoDB", "MySQL", "Docker", "Git/GitHub", "CI/CD"],
+    name: "Web & Mobile Platforms",
+    items: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Kotlin (Jetpack Compose)",
+      "Flutter",
+      "Tailwind CSS",
+    ],
   },
   {
-    name: "AI & Automation",
-    items: ["LLM API Integration", "Prompt Engineering"],
+    name: "Databases & Storage",
+    items: [
+      "MongoDB Atlas",
+      "GridFS (Binary Media Storage)",
+      "MySQL",
+      "SQLite / Room",
+    ],
+  },
+  {
+    name: "Testing & DevOps",
+    items: [
+      "Vitest",
+      "React Testing Library",
+      "Mock Service Worker (MSW)",
+      "GitHub Actions (CI/CD Pipelines)",
+      "Git / Postman",
+    ],
+  },
+  {
+    name: "Programming Languages",
+    items: [
+      "Python",
+      "Kotlin",
+      "TypeScript",
+      "JavaScript",
+      "SQL",
+      "C++",
+      "Java",
+      "Dart",
+    ],
   },
 ];
 
@@ -93,7 +153,7 @@ export default function Home() {
                 <p className="text-text-secondary text-sm font-light leading-relaxed max-w-[65ch]">
                   {p.desc}
                 </p>
-                {p.title === "AI-Powered Health App" && (
+                {p.title === "AI-Powered Multi-Modal Health Platform" && (
                   <ProjectVideo youtubeId="BA7dbMfby58" />
                 )}
 

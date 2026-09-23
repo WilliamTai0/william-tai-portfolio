@@ -13,7 +13,7 @@ export default function Header() {
             William Tai
           </h1>
           <p className="text-text-muted text-body max-w-2xl font-light">
-            Final-Year Computer Engineering @ HKUST — Full-Stack &amp; AI-Native Developer
+            Computer Engineering Graduate @ HKUST — Backend Systems &amp; AI Integration
           </p>
         </div>
         <a
