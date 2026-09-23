@@ -101,6 +101,17 @@ const skillCategories = [
   },
 ];
 
+const experiences = [
+  {
+    role: "IT Deployment Technician (Contract)",
+    company: "Proseek Technology",
+    client: "Client: UBS (West Kowloon HQ)",
+    period: "Sep 2026 — Present",
+    desc: "Deployed enterprise workstations and dual-monitor displays across UBS trading floors, ensuring strict hardware, power distribution, and cable management compliance. Audited enterprise assets, inspected BIOS configs, and cataloged 500+ endpoints.",
+    tags: ["Enterprise Infrastructure", "Trading Floor Rollout", "Asset Auditing", "BIOS Config"],
+  },
+];
+
 export default function Home() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-12 md:py-20 font-body">
@@ -164,6 +175,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Experience Section */}
+      <section className="mb-20">
+        <h2 className="text-headline font-light font-display text-text-primary mb-10">
+          Experience
+        </h2>
+        <div className="flex flex-col gap-10">
+          {experiences.map((exp) => (
+            <div
+              key={exp.role}
+              className="flex flex-col md:flex-row gap-4 md:gap-8 justify-between items-start"
+            >
+              <div className="md:w-1/3 flex flex-col gap-1.5 shrink-0">
+                <span className="text-title font-medium text-text-primary">
+                  {exp.role}
+                </span>
+                <span className="text-sm text-text-secondary">
+                  {exp.company}
+                </span>
+                <div className="font-mono text-xs text-text-muted">
+                  {exp.period}
+                </div>
+              </div>
+              <div className="md:w-2/3 flex flex-col gap-2">
+                <span className="text-xs font-mono text-steel-silver tracking-wide">
+                  {exp.client}
+                </span>
+                <p className="text-text-secondary text-sm font-light leading-relaxed max-w-[65ch]">
+                  {exp.desc}
+                </p>
+                <div className="font-mono text-xs text-text-muted mt-1">
+                  {exp.tags.join(" / ")}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Skills Section */}
       <section className="mb-16">
