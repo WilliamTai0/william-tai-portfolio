@@ -17,8 +17,8 @@ export default function Header() {
           </p>
         </div>
         <a
-          href="/resume.pdf"
-          download
+          href="/William_Tai_CV.pdf"
+          download="William_Tai_CV.pdf"
           className="inline-flex items-center gap-2 h-11 px-4 bg-steel-silver text-obsidian-black font-semibold text-sm rounded-xs transition-colors hover:bg-text-primary whitespace-nowrap"
           aria-label="Download Resume"
         >
